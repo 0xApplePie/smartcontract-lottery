@@ -130,6 +130,7 @@ contract Raffle is VRFConsumerBaseV2 {
         return s_raffleState;
     }
 
+    // number of words is 1
     function getNumWords() public pure returns (uint256) {
         return NUM_WORDS;
     }
