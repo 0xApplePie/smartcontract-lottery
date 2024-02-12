@@ -114,6 +114,7 @@ import exp from "constants";
             await network.provider.send("evm_increaseTime", [interval+1])
             await network.provider.request({ method: "evm_mine", params: [] })
             const tx = await raffle.performUpkeep("0x")
+            console.log("tranaction:", tx);
             assert(tx)
         })
 
