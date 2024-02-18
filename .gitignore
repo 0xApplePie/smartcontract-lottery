@@ -100,3 +100,5 @@ lint/tmp/
 # lint/reports/
 
 gas-report.txt
+temp_Raffle.sol
+temp_Raffle_test.js

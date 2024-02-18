@@ -101,7 +101,7 @@ import exp from "constants";
 
         it("returns true if enough time has passed, has players, has eth and is open", async () => {
             await raffle.enterRaffle({ value: raffleEntranceFee })
-            await network.provider.send("evm_increaseTime", [interval+1])
+            await network.provider.send("evm_increaseTime", [interval +1])
             await network.provider.request({ method: "evm_mine", params: [] })
             const { upkeepNeeded } = await raffle.callStatic.checkUpkeep("0x")
             assert.isTrue(upkeepNeeded)
@@ -114,7 +114,6 @@ import exp from "constants";
             await network.provider.send("evm_increaseTime", [interval+1])
             await network.provider.request({ method: "evm_mine", params: [] })
             const tx = await raffle.performUpkeep("0x")
-            console.log("tranaction:", tx);
             assert(tx)
         })
 
